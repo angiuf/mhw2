@@ -122,7 +122,7 @@ function rimuoviPreferiti(event) {
 }
 
 //Funzione per creare un elemento preferito simile a creaContenuto
-function aggiungiPreferito(titolo, immagine, sezione, id) {
+function creaPreferito(titolo, immagine, sezione, id) {
     blocco = document.createElement('div');
     blocco.classList.add('content');
     blocco.classList.add('favorite');
@@ -160,7 +160,7 @@ function visualizzaPreferiti() {
     }else {
         pref.classList.remove('hidden');
         for(contenuto of lista_preferiti){
-            aggiungiPreferito(contenuto.titolo, contenuto.immagine, '#lista_preferiti div', contenuto.id);
+            creaPreferito(contenuto.titolo, contenuto.immagine, '#lista_preferiti div', contenuto.id);
         }
     }
 }
